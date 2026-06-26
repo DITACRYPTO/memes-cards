@@ -76,3 +76,26 @@ a {
   );
   opacity: 0.25;
 }
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  position: relative;
+}
+
+.hero {
+  min-height: 100vh;
+}
+
+section {
+  min-height: auto;
+}
+
+.collection,
+#collection {
+  display: block;
+  margin-top: 40px;
+}
