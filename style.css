@@ -1,8 +1,9 @@
+```css
 body{
   margin:0;
   background:#000;
   color:#d4af37;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
 .hero{
@@ -10,62 +11,62 @@ body{
   padding:60px 6% 120px;
 }
 
-.hero-banner{
+.hero-banner,
+.pack,
+.footer-banner,
+.image img{
   width:100%;
-  max-width:1500px;
-  border-radius:18px;
-  margin-bottom:70px;
+  display:block;
 }
 
-h1{
+.hero-banner{
+  max-width:1500px;
+  margin:0 auto 70px;
+  border-radius:20px;
+}
+
+.hero h1{
   font-size:72px;
   margin:0;
   letter-spacing:4px;
 }
 
-h2{
-  font-size:48px;
-  margin-bottom:30px;
-  letter-spacing:2px;
-}
-
-p{
-  font-size:21px;
-  line-height:1.8;
-  color:#e0c36a;
+.hero p{
+  font-size:22px;
 }
 
 .tagline{
-  color:#f7d77a;
+  color:#f6d06d;
 }
 
 .split{
   width:88%;
-  max-width:1350px;
+  max-width:1400px;
   margin:auto;
-  padding:90px 0;
+  padding:100px 0;
   display:flex;
-  gap:80px;
   align-items:center;
+  gap:80px;
 }
 
-.split div{
+.image,
+.text{
   flex:1;
 }
 
-.split img{
-  width:100%;
+.image img{
   border-radius:24px;
 }
 
-.text{
-  max-width:560px;
+.text h2{
+  font-size:48px;
+  margin-bottom:30px;
 }
 
-ul{
+.text p,
+.text li{
   font-size:21px;
-  line-height:2;
-  color:#f1d37a;
+  line-height:1.8;
 }
 
 .center{
@@ -73,31 +74,54 @@ ul{
   padding:100px 6%;
 }
 
+.center h2{
+  font-size:48px;
+  margin-bottom:50px;
+}
+
 .pack{
-  width:100%;
   max-width:850px;
+  margin:auto;
   border-radius:24px;
 }
 
 footer{
   text-align:center;
-  padding:100px 6% 130px;
+  padding:120px 6%;
 }
 
 .footer-banner{
-  width:100%;
   max-width:1300px;
-  border-radius:18px;
-  margin-bottom:50px;
+  margin:0 auto 50px;
+  border-radius:20px;
 }
 
-@media(max-width:900px){
-  h1{font-size:44px;}
-  h2{font-size:32px;}
-  p, ul{font-size:17px;}
+.rights{
+  margin-top:50px;
+  color:#888;
+  letter-spacing:2px;
+}
+
+@media (max-width:900px){
 
   .split{
     flex-direction:column;
-    gap:40px;
+    gap:50px;
+  }
+
+  .hero h1{
+    font-size:46px;
+  }
+
+  .text h2,
+  .center h2{
+    font-size:32px;
+  }
+
+  .text p,
+  .text li,
+  .hero p{
+    font-size:18px;
   }
 }
+```
