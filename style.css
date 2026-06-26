@@ -1,4 +1,3 @@
-/* RESET */
 *,
 *::before,
 *::after {
@@ -7,158 +6,73 @@
   padding: 0;
 }
 
-/* PAGE */
 html,
 body {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
   background: #000;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overscroll-behavior: none;
 }
 
-/* REMOVE IPHONE HIGHLIGHTS */
 body {
-  position: fixed;
-  inset: 0;
-  touch-action: manipulation;
+  position: relative;
   -webkit-tap-highlight-color: transparent;
-  user-select: none;
 }
 
-/* APP */
 #app,
 .app,
 main {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background: #000;
+  color: #fff;
   position: relative;
 }
 
-/* CARD */
-.card {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.card,
+.section,
+.hero,
+.collection,
+.wrapper,
+.container {
   background: #000;
-  overflow: hidden;
+  color: #fff;
 }
 
-/* IMAGES */
-img {
+img,
+video {
   display: block;
   max-width: 100%;
-  height: auto;
-  user-select: none;
-  -webkit-user-drag: none;
 }
 
-/* VIDEOS */
 video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #000;
-  display: block;
-}
-
-/* CANVAS */
-canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
   background: #000;
 }
 
-/* BUTTONS */
-button {
-  border: none;
-  background: rgba(255,255,255,0.08);
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 12px;
-  cursor: pointer;
-  backdrop-filter: blur(10px);
-  transition: 0.2s;
-}
-
-button:hover {
-  background: rgba(255,255,255,0.15);
-}
-
-/* LOADER */
 .loader {
-  position: absolute;
-  inset: 0;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+  display: none !important;
 }
 
-.loader::after {
-  content: "";
-  width: 42px;
-  height: 42px;
-  border: 3px solid rgba(255,255,255,0.15);
-  border-top: 3px solid #fff;
-  border-radius: 50%;
-  animation: spin 0.9s linear infinite;
+button,
+a {
+  color: #fff;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* FADE EFFECTS */
-.fade-in {
-  animation: fadeIn 0.6s ease forwards;
-}
-
-.fade-out {
-  animation: fadeOut 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-/* OPTIONAL VINTAGE TV EFFECT */
 .vintage::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.02) 0px,
-      rgba(255,255,255,0.02) 1px,
-      transparent 2px,
-      transparent 4px
-    );
-  mix-blend-mode: screen;
-  opacity: 0.35;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.025) 0px,
+    rgba(255,255,255,0.025) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  opacity: 0.25;
 }
