@@ -1,0 +1,98 @@
+body{
+  margin:0;
+  background:#000;
+  color:#d8b56a;
+  font-family:Arial,sans-serif;
+}
+
+section{
+  width:90%;
+  max-width:1400px;
+  margin:auto;
+  padding:120px 0;
+}
+
+.hero{
+  text-align:center;
+}
+
+.hero-banner{
+  width:100%;
+  border-radius:20px;
+  margin-bottom:50px;
+}
+
+.hero h1{
+  font-size:70px;
+  margin:0;
+}
+
+.hero p{
+  font-size:22px;
+}
+
+.gold{
+  color:#f0cf85;
+}
+
+.about,
+.merch{
+  display:flex;
+  gap:80px;
+  align-items:center;
+}
+
+.about img,
+.merch img{
+  width:100%;
+  border-radius:25px;
+}
+
+.about-image,
+.about-text,
+.merch-image,
+.merch-text{
+  flex:1;
+}
+
+.about h2,
+.display h2,
+.merch h2{
+  font-size:50px;
+  margin-bottom:30px;
+}
+
+.about p,
+.merch p{
+  font-size:22px;
+  line-height:1.8;
+}
+
+.about li{
+  margin:20px 0;
+  font-size:20px;
+}
+
+.display{
+  text-align:center;
+}
+
+.pack-display{
+  width:80%;
+  max-width:900px;
+}
+
+footer{
+  text-align:center;
+  padding:120px 30px;
+}
+
+.footer-banner{
+  width:100%;
+  max-width:1000px;
+  margin-bottom:50px;
+}
+
+footer p{
+  font-size:22px;
+}
