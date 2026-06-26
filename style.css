@@ -2,107 +2,102 @@ body{
   margin:0;
   background:#000;
   color:#d4af37;
-  font-family:Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-section{
-  width:90%;
-  max-width:1400px;
-  margin:auto;
-  padding:120px 0;
-}
-
-header{
+.hero{
   text-align:center;
+  padding:60px 6% 120px;
 }
 
 .hero-banner{
   width:100%;
-  border-radius:20px;
-  margin-bottom:60px;
+  max-width:1500px;
+  border-radius:18px;
+  margin-bottom:70px;
 }
 
 h1{
   font-size:72px;
   margin:0;
+  letter-spacing:4px;
 }
 
 h2{
-  font-size:50px;
+  font-size:48px;
   margin-bottom:30px;
+  letter-spacing:2px;
 }
 
 p{
-  font-size:22px;
+  font-size:21px;
   line-height:1.8;
+  color:#e0c36a;
 }
 
-.gold{
-  color:#f4c765;
+.tagline{
+  color:#f7d77a;
 }
 
-.about,
-.merch{
+.split{
+  width:88%;
+  max-width:1350px;
+  margin:auto;
+  padding:90px 0;
   display:flex;
-  gap:100px;
+  gap:80px;
   align-items:center;
 }
 
-.about img,
-.merch img{
-  width:100%;
-  border-radius:25px;
-}
-
-.about-image,
-.about-text,
-.merch-image,
-.merch-text{
+.split div{
   flex:1;
 }
 
-.pack-display{
+.split img{
   width:100%;
-  max-width:700px;
-  display:block;
-  margin:auto;
-  border-radius:25px;
+  border-radius:24px;
+}
+
+.text{
+  max-width:560px;
 }
 
 ul{
-  font-size:22px;
+  font-size:21px;
   line-height:2;
+  color:#f1d37a;
+}
+
+.center{
+  text-align:center;
+  padding:100px 6%;
+}
+
+.pack{
+  width:100%;
+  max-width:850px;
+  border-radius:24px;
 }
 
 footer{
   text-align:center;
-  padding:120px 40px;
+  padding:100px 6% 130px;
 }
 
 .footer-banner{
   width:100%;
-  max-width:1200px;
-  border-radius:25px;
-  margin-bottom:60px;
+  max-width:1300px;
+  border-radius:18px;
+  margin-bottom:50px;
 }
 
 @media(max-width:900px){
+  h1{font-size:44px;}
+  h2{font-size:32px;}
+  p, ul{font-size:17px;}
 
-  h1{
-    font-size:48px;
-  }
-
-  h2{
-    font-size:36px;
-  }
-
-  .about,
-  .merch{
+  .split{
     flex-direction:column;
-  }
-
-  p,
-  ul{
-    font-size:18px;
+    gap:40px;
   }
 }
