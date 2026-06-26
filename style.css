@@ -1,127 +1,164 @@
-```css
-body{
-  margin:0;
-  background:#000;
-  color:#d4af37;
-  font-family:Arial,Helvetica,sans-serif;
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.hero{
-  text-align:center;
-  padding:60px 6% 120px;
+/* PAGE */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
 }
 
-.hero-banner,
-.pack,
-.footer-banner,
-.image img{
-  width:100%;
-  display:block;
+/* REMOVE IPHONE HIGHLIGHTS */
+body {
+  position: fixed;
+  inset: 0;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
-.hero-banner{
-  max-width:1500px;
-  margin:0 auto 70px;
-  border-radius:20px;
+/* APP */
+#app,
+.app,
+main {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: relative;
 }
 
-.hero h1{
-  font-size:72px;
-  margin:0;
-  letter-spacing:4px;
+/* CARD */
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
 }
 
-.hero p{
-  font-size:22px;
+/* IMAGES */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-.tagline{
-  color:#f6d06d;
+/* VIDEOS */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: block;
 }
 
-.split{
-  width:88%;
-  max-width:1400px;
-  margin:auto;
-  padding:100px 0;
-  display:flex;
-  align-items:center;
-  gap:80px;
+/* CANVAS */
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
 }
 
-.image,
-.text{
-  flex:1;
+/* BUTTONS */
+button {
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: 0.2s;
 }
 
-.image img{
-  border-radius:24px;
+button:hover {
+  background: rgba(255,255,255,0.15);
 }
 
-.text h2{
-  font-size:48px;
-  margin-bottom:30px;
+/* LOADER */
+.loader {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
-.text p,
-.text li{
-  font-size:21px;
-  line-height:1.8;
+.loader::after {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
 }
 
-.center{
-  text-align:center;
-  padding:100px 6%;
-}
-
-.center h2{
-  font-size:48px;
-  margin-bottom:50px;
-}
-
-.pack{
-  max-width:850px;
-  margin:auto;
-  border-radius:24px;
-}
-
-footer{
-  text-align:center;
-  padding:120px 6%;
-}
-
-.footer-banner{
-  max-width:1300px;
-  margin:0 auto 50px;
-  border-radius:20px;
-}
-
-.rights{
-  margin-top:50px;
-  color:#888;
-  letter-spacing:2px;
-}
-
-@media (max-width:900px){
-
-  .split{
-    flex-direction:column;
-    gap:50px;
-  }
-
-  .hero h1{
-    font-size:46px;
-  }
-
-  .text h2,
-  .center h2{
-    font-size:32px;
-  }
-
-  .text p,
-  .text li,
-  .hero p{
-    font-size:18px;
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
-```
+
+/* FADE EFFECTS */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* OPTIONAL VINTAGE TV EFFECT */
+.vintage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.02) 0px,
+      rgba(255,255,255,0.02) 1px,
+      transparent 2px,
+      transparent 4px
+    );
+  mix-blend-mode: screen;
+  opacity: 0.35;
+}
