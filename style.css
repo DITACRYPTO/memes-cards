@@ -1,8 +1,8 @@
 body{
   margin:0;
   background:#000;
-  color:#d8b56a;
-  font-family:Arial,sans-serif;
+  color:#d4af37;
+  font-family:Arial, sans-serif;
 }
 
 section{
@@ -12,33 +12,39 @@ section{
   padding:120px 0;
 }
 
-.hero{
+header{
   text-align:center;
 }
 
 .hero-banner{
   width:100%;
   border-radius:20px;
-  margin-bottom:50px;
+  margin-bottom:60px;
 }
 
-.hero h1{
-  font-size:70px;
+h1{
+  font-size:72px;
   margin:0;
 }
 
-.hero p{
+h2{
+  font-size:50px;
+  margin-bottom:30px;
+}
+
+p{
   font-size:22px;
+  line-height:1.8;
 }
 
 .gold{
-  color:#f0cf85;
+  color:#f4c765;
 }
 
 .about,
 .merch{
   display:flex;
-  gap:80px;
+  gap:100px;
   align-items:center;
 }
 
@@ -55,44 +61,48 @@ section{
   flex:1;
 }
 
-.about h2,
-.display h2,
-.merch h2{
-  font-size:50px;
-  margin-bottom:30px;
-}
-
-.about p,
-.merch p{
-  font-size:22px;
-  line-height:1.8;
-}
-
-.about li{
-  margin:20px 0;
-  font-size:20px;
-}
-
-.display{
-  text-align:center;
-}
-
 .pack-display{
-  width:80%;
-  max-width:900px;
+  width:100%;
+  max-width:700px;
+  display:block;
+  margin:auto;
+  border-radius:25px;
+}
+
+ul{
+  font-size:22px;
+  line-height:2;
 }
 
 footer{
   text-align:center;
-  padding:120px 30px;
+  padding:120px 40px;
 }
 
 .footer-banner{
   width:100%;
-  max-width:1000px;
-  margin-bottom:50px;
+  max-width:1200px;
+  border-radius:25px;
+  margin-bottom:60px;
 }
 
-footer p{
-  font-size:22px;
+@media(max-width:900px){
+
+  h1{
+    font-size:48px;
+  }
+
+  h2{
+    font-size:36px;
+  }
+
+  .about,
+  .merch{
+    flex-direction:column;
+  }
+
+  p,
+  ul{
+    font-size:18px;
+  }
 }
